@@ -1,6 +1,7 @@
 /******** CORE CSS *****/
 
 @import url("reset.css");
+<<<<<<< HEAD
 main{
   display: flex;
   justify-content: space-around;
@@ -11,3 +12,5 @@ main{
   width: 300px;
   background-color: #ccc;
 }
+=======
+>>>>>>> feature/stylesheets_folder_window_center
