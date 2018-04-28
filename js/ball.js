@@ -5,7 +5,7 @@ let ballSize = 25;
 let timeStep = 50;
 
 function animatedBall(gw){
-  let ball = GOval( 275, 700, ballSize);
+  let ball = GOval( 312.5, 690, ballSize);
   ball.setFilled(true);
   gw.add(ball);
 
