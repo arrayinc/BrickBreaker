@@ -10,8 +10,8 @@ function animatedBall(gw){
   gw.add(ball);
 
 
-  let dy = (gw.getWidth() - ballSize) / timeStep;
-  let dx = (gw.getHeight() + ballSize) / timeStep;
+  let dx = (gw.getWidth() - ballSize) / timeStep;
+  let dy = (gw.getHeight() - ballSize) / timeStep;
   let stepCount = 0;
 
   function step(){

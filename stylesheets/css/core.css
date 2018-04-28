@@ -1,0 +1,7 @@
+/******** CORE CSS *****/
+
+@import url("reset.css");
+
+canvas{
+  margin-left: 300px;
+}
