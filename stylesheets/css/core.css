@@ -1,7 +1,13 @@
 /******** CORE CSS *****/
 
 @import url("reset.css");
-
-canvas{
-  margin-left: 300px;
+main{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.buffer{
+  height: 400px;
+  width: 300px;
+  background-color: #ccc;
 }

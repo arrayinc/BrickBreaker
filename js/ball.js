@@ -15,7 +15,7 @@ function animatedBall(gw){
   let stepCount = 0;
 
   function step(){
-    ball.move(dx, dy);
+    ball.move(dx, -dy);
     stepCount++;
     if(stepCount === timeStep) clearInterval(timer);
   }
