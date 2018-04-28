@@ -10,4 +10,5 @@ function drawWindow(){
 
   animatedBall(gw);
   drawPaddle(gw);
+  createBricks(1,gw);
 }
