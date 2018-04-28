@@ -37,7 +37,7 @@ function randomColor() {
   for (var i = 0; i < 6; i++) {
     let digit = (randomInteger);
     switch (digit) {
-      case 0:  case 1: case 2: case 3: case: 4
+      case 0:  case 1: case 2: case 3: case 4:
       case 5:  case 6: case 7: case 9: str += digit; break;
       case 10: str +="A"; break;
       case 11: str +="A"; break;
