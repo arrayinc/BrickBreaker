@@ -8,5 +8,3 @@ function drawPaddle(gw) {
   paddle.setFilled(true);
   gw.add(paddle);
 }
-
-drawPaddle();
