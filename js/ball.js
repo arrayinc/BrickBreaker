@@ -23,7 +23,7 @@ function animatedBall(gw){
   function step(){
     ball.move(dx, -dy);
     stepCount++;
-    if(stepCount === timeStep) clearInterval(timer);
+    //if(stepCount === timeStep) clearInterval(timer);
 
     ballPosittionX = ballPosittionX + dx;
     ballPosittionY = ballPosittionY - dy;
