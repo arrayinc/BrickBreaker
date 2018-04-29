@@ -25,7 +25,7 @@ function animatedBall(gw){
     ballPosittionX = ballPosittionX + dx;
     ballPosittionY = ballPosittionY - dy;
 
-    // Ball collision detection variable
+    // Ball collision detection variables
     ballTopRightConner = gw.getElementAt(ballPosittionX + ballSize, ballPosittionY - ballSize);
     ballTopLeftConner = gw.getElementAt(ballPosittionX - ballSize, ballPosittionY - ballSize);
     ballBottomRightConner = gw.getElementAt(ballPosittionX + ballSize, ballPosittionY + ballSize);
@@ -37,7 +37,7 @@ function animatedBall(gw){
       dx = -dx;
       return;
     }
-    // Left Wall, the ball rebounces only
+    // Left Wall
     if (ballPosittionX - ballSize/2 === 0){
       dx = -dx;
       return;
