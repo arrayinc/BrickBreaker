@@ -1,4 +1,4 @@
-/* global GWindow, animatedBall */
+/* global GWindow, animatedBall, drawPaddle, createBricks */
 
 
 const GW_WIDTH = 650;
