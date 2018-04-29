@@ -14,10 +14,10 @@ function animatedBall(gw){
   let dx = ballSize / 2;
   let dy = ballSize / 2;
 
-  let ballTopRightConner = 0;
-  let ballTopLeftConner = 0;
-  let ballBottomRightConner = 0;
-  let ballBottomLeftConner = 0;
+  let ballTopRightCorner = 0;
+  let ballTopLeftCorner = 0;
+  let ballBottomRightCorner = 0;
+  let ballBottomLeftCorner = 0;
 
   function step(){
     ball.move(dx, -dy);
@@ -26,10 +26,10 @@ function animatedBall(gw){
     ballPosittionY = ballPosittionY - dy;
 
     // Ball collision detection variables
-    ballTopRightConner = gw.getElementAt(ballPosittionX + ballSize, ballPosittionY - ballSize);
-    ballTopLeftConner = gw.getElementAt(ballPosittionX - ballSize, ballPosittionY - ballSize);
-    ballBottomRightConner = gw.getElementAt(ballPosittionX + ballSize, ballPosittionY + ballSize);
-    ballBottomLeftConner = gw.getElementAt(ballPosittionX - ballSize, ballPosittionY + ballSize);
+    ballTopRightCorner = gw.getElementAt(ballPosittionX + ballSize, ballPosittionY - ballSize);
+    ballTopLeftCorner = gw.getElementAt(ballPosittionX - ballSize, ballPosittionY - ballSize);
+    ballBottomRightCorner = gw.getElementAt(ballPosittionX + ballSize, ballPosittionY + ballSize);
+    ballBottomLeftCorner = gw.getElementAt(ballPosittionX - ballSize, ballPosittionY + ballSize);
 
     //  Checking for wall
     // Right wall
@@ -53,25 +53,25 @@ function animatedBall(gw){
       clearInterval(timer);
     }
     // Checking for objects
-    if(ballTopRightConner !== null || ballTopLeftConner !== null || ballBottomLeftConner !== null|| ballBottomRightConner !== null){
+    if(ballTopRightCorner !== null || ballTopLeftCorner !== null || ballBottomLeftCorner !== null|| ballBottomRightCorner !== null){
       //If object is present the ball's direction of travel switches, the ball rebounces
       dx = -dx;
       dy = -dy;
       // Ball Rebounding on a object from the ball top or the ball bottom
-      if (dx > 0 && dy > 0 || dx < 0 && dy < 0 && ballTopRightConner !== null || ballBottomLeftConner !== null){
+      if (dx > 0 && dy > 0 || dx < 0 && dy < 0 && ballTopRightCorner !== null || ballBottomLeftCorner !== null){
         dx = -dx;
         return;
       }
-      if (dx > 0 && dy < 0 || dx < 0 && dy > 0 && ballBottomRightConner !== null || ballTopLeftConner !== null){
+      if (dx > 0 && dy < 0 || dx < 0 && dy > 0 && ballBottomRightCorner !== null || ballTopLeftCorner !== null){
         dx = -dx;
         return;
       }
       // Ball Rebounding on a object from the ball left or right side
-      if (dx > 0 && dy > 0 || dx < 0 && dy < 0 && ballTopLeftConner !== null || ballBottomLeftConner !== null){
+      if (dx > 0 && dy > 0 || dx < 0 && dy < 0 && ballTopLeftCorner !== null || ballBottomLeftCorner !== null){
         dy = -dy;
         return;
       }
-      if (dx > 0 && dy < 0 || dx < 0 && dy > 0 && ballTopRightConner !== null || ballBottomRightConner !== null){
+      if (dx > 0 && dy < 0 || dx < 0 && dy > 0 && ballTopRightCorner !== null || ballBottomRightCorner !== null){
         dy = -dy;
         return;
       }
