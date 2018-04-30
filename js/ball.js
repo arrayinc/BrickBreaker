@@ -3,16 +3,16 @@
 let ballPosittionX = 312;
 let ballPosittionY = 686;
 let ballSize = 26;
-let timeStep = 100;
+let timeStep = 50;
 
 function animatedBall(gw){
   let ball = GOval(ballPosittionX, ballPosittionY, ballSize);// Ball starting point on the paddle
   ball.setFilled(true);
   gw.add(ball);
 
-
-  let dx = ballSize / 2;
-  let dy = ballSize / 2;
+                          /*    Directional Variables                      */
+  let dx = ballSize / 2;  /*    At dx=ballSize/2 and at dy=ballSize/2     */
+  let dy = ballSize / 2;  /*    Ball will move in 315 degree polar angle  */
 
   let ballTopRightCorner = 0;
   let ballTopLeftCorner = 0;
@@ -35,7 +35,7 @@ function animatedBall(gw){
 
 
 
-    //  Checking for wall
+    //******* Checking for wall
     // If Right wall is present ball will rebound to the left
     if (ballPosittionX + ballSize/2 === GW_WIDTH){
       dx = -dx;
@@ -107,7 +107,7 @@ function animatedBall(gw){
   let timer = setInterval(step, timeStep);// Calls the step() with a wait of timeStep in ms
 }
 
-//Block to text Ball collision detection and rebouce motion
+//Block to text Ball collision detection and rebound motion
 // function testBrick(gw) {
 //   let brick = GRect(200,0,400,350);
 //   brick.setFilled(true);
